@@ -11,6 +11,3 @@ app.db = router.db;
 app.use(auth);
 app.use(router);
 app.listen(3000);
-
-// Export the Server API
-module.exports = server;
