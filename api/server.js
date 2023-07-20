@@ -7,7 +7,6 @@ const router = jsonServer.router("db.json");
 
 const rules = jsonServer.rewriter({
   "/books/*": "/$1",
-  "/users/*": "/$1",
 });
 
 // /!\ Bind the router db to the app
@@ -17,5 +16,5 @@ app.db = router.db;
 app.use(cors());
 app.use(rules);
 app.use(auth);
-app.use(router);
+app.use("/books", router);
 app.listen(3000);
