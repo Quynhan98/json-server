@@ -1,14 +1,147 @@
 {
-  "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" },
-    { "id": 1, "title": "json-server", "author": "typicode" }
+  "users": [
+    {
+      "email": "asnet@gmail.com.vn",
+      "password": "$2a$10$KVlfGw7IqRaJgJ5IygzfcOZnMChw3WcAMgGY5RyI7smBhXhWLU3V2",
+      "id": "iu8ijh"
+    }
   ],
-  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
-  "profile": { "name": "typicode" }
+  "books": [
+    {
+      "id": "1",
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "quantityInStock": 10,
+      "category": "Fiction",
+      "description": "A novel about the decadence and excess of the Jazz Age, set in the Roaring Twenties."
+    },
+    {
+      "id": "2",
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "quantityInStock": 7,
+      "category": "Fiction",
+      "description": "A novel about a young girl growing up in the Deep South during the 1930s, and about the crisis of civil rights in the South following the Civil Rights Act of 1957."
+    },
+    {
+      "id": "3",
+      "name": "1984",
+      "author": "George Orwell",
+      "quantityInStock": 5,
+      "category": "Science Fiction",
+      "description": "A dystopian novel set in a totalitarian society where government surveillance and propaganda are omnipresent."
+    },
+    {
+      "id": "4",
+      "name": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "quantityInStock": 8,
+      "category": "Fiction",
+      "description": "A novel about a young boy growing up in the Deep South during the 1930s, and about the crisis of civil rights in the South following the Civil Rights Act of 1957."
+    },
+    {
+      "id": "5",
+      "name": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "quantityInStock": 12,
+      "category": "Fantasy",
+      "description": "A trilogy of epic fantasy novels about the quest for the Hobbit and the Lord of the Rings."
+    },
+    {
+      "id": "6",
+      "name": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "quantityInStock": 9,
+      "category": "Fantasy",
+      "description": "A children's fantasy novel about a hobbit who is recruited by a wizard to help a group of dwarves reclaim their treasure from a dragon."
+    },
+    {
+      "id": "7",
+      "name": "The Da Vinci Code",
+      "author": "Dan Brown",
+      "quantityInStock": 11,
+      "category": "Science Fiction",
+      "description": "A novel about a secret government agency that helps to decipher ancient Egyptian hieroglyphs."
+    },
+    {
+      "id": "8",
+      "name": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "quantityInStock": 10,
+      "category": "Fiction",
+      "description": "A novel about the decadence and excess of the Jazz Age, set in the Roaring Twenties."
+    },
+    {
+      "id": "9",
+      "name": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "quantityInStock": 7,
+      "category": "Fiction",
+      "description": "A novel about a young girl growing up in the Deep South during the 1930s, and about the crisis of civil rights in the South following the Civil Rights Act of 1957."
+    },
+    {
+      "id": "10",
+      "name": "1984",
+      "author": "George Orwell",
+      "quantityInStock": 5,
+      "category": "Science Fiction",
+      "description": "A dystopian novel set in a totalitarian society where government surveillance and propaganda are omnipresent."
+    },
+    {
+      "id": "11",
+      "name": "The Hunger Games",
+      "author": "Suzanne Collins",
+      "quantityInStock": 9,
+      "category": "Science Fiction",
+      "description": "The Hunger Games is a novel by Suzanne Collins about a teenager who is sent to fight in a game of survival known as the Hunger Games, where she must outsmart her pursuers and survive the rigors of the game. The novel explores themes of survival, identity, and the human condition."
+    },
+    {
+      "id": "12",
+      "name": "The Fault in Our Stars",
+      "author": "Ernest Hemingway",
+      "quantityInStock": 11,
+      "category": "Classics",
+      "description": "The Fault in Our Stars is a novel by Ernest Hemingway about a young woman who is wrongfully accused of murdering her sister, and her efforts to clear her name. The novel explores themes of love, guilt, and the human condition."
+    },
+    {
+      "id": "13",
+      "name": "The Giver",
+      "author": "Toni Morrison",
+      "quantityInStock": 16,
+      "category": "Drama",
+      "description": "The Giver is a novel by Toni Morrison about a young woman who is falsely accused of abuse by her boyfriend, and her efforts to clear her name. The novel explores themes of love, guilt, and the human condition."
+    },
+    {
+      "id": "14",
+      "name": "The Alchemist",
+      "author": "Paulo Coelho",
+      "quantityInStock": 15,
+      "category": "Classics",
+      "description": "The Alchemist is a novel by Paulo Coelho about a young boy who is accidentally transported to the past, and his struggle to find his way back to the present. The novel explores themes of time travel, identity, and the human condition."
+    },
+    {
+      "id": "15",
+      "name": "The Lion, the Witch, and the Wardrobe",
+      "author": "J.K. Rowling",
+      "quantityInStock": 1,
+      "category": "Fantasy",
+      "description": "The Lion, the Witch, and the Wardrobe is a novel by J.K. Rowling about a young girl who is cursed to wear a witch's hat and wield a lion's sword, and her bravery and determination to break free from her spell."
+    },
+    {
+      "id": "16",
+      "name": "The Picture of Dorian Gray",
+      "author": "Francis Ford Coppola",
+      "quantityInStock": 6,
+      "category": "Classics",
+      "description": "The Picture of Dorian Gray is a novel by Francis Ford Coppola about a young man who is falsely accused of murdering his wife, and his efforts to clear his name. The novel explores themes of love, guilt, and the human condition."
+    },
+    {
+      "id": "17",
+      "name": "The Name of the Rose",
+      "author": "Ernest Hemingway",
+      "quantityInStock": 4,
+      "category": "Classics",
+      "description": "The Name of the Rose is a novel by Ernest Hemingway about a young woman who is falsely accused of murdering her husband, and her efforts to clear her name. The novel explores themes of love, guilt, and the human condition."
+    }
+  ]
 }
