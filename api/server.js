@@ -4,6 +4,8 @@ const cors = require("cors");
 
 const app = jsonServer.create();
 const router = jsonServer.router("db.json");
+const filePath = path.join("/tmp", "db.json");
+fs.writeFileSync(filePath, JSON.stringify(data));
 
 // /!\ Bind the router db to the app
 app.db = router.db;
