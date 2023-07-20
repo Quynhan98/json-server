@@ -7,8 +7,6 @@ const app = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const rules = jsonServer.rewriter();
-
 // /!\ Bind the router db to the app
 app.db = router.db;
 
