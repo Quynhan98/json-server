@@ -18,6 +18,25 @@ app.db = router.db;
 
 app.use(middlewares);
 
+// Set default middlewares (logger, static, cors and no-cache)
+app.use(middlewares);
+
+// Add custom routes before JSON Server router
+app.get("/echo", (req, res) => {
+  res.jsonp(req.query);
+});
+
+// To handle POST, PUT and PATCH you need to use a body-parser
+// You can use the one used by JSON Server
+app.use(jsonServer.bodyParser);
+app.use((req, res, next) => {
+  if (req.method === "POST") {
+    req.body.createdAt = Date.now();
+  }
+  // Continue to JSON Server router
+  next();
+});
+
 // You must apply the auth middleware before the router
 app.use(cors());
 app.use(auth);
