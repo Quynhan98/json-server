@@ -10,14 +10,7 @@ const middlewares = jsonServer.defaults();
 app.db = router.db;
 
 app.use(middlewares);
-app.use((req, res, next) => {
-  if (isAuthorized(req)) {
-    // add your authorization logic here
-    next(); // continue to JSON Server router
-  } else {
-    res.sendStatus(401);
-  }
-});
+
 // You must apply the auth middleware before the router
 app.use(cors());
 app.use(auth);
