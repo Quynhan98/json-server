@@ -2,6 +2,13 @@ const jsonServer = require("json-server");
 const auth = require("json-server-auth");
 const cors = require("cors");
 
+server.use(
+  jsonServer.rewriter({
+    "/api/*": "/$1",
+    "/books/*": "/$1",
+  })
+);
+
 const app = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
