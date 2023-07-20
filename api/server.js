@@ -5,12 +5,9 @@ const cors = require("cors");
 const app = jsonServer.create();
 const router = jsonServer.router("db.json");
 
-const rules = auth.rewriter({
-  // Permission rules
-  users: 600,
-  messages: 640,
-  // Other rules
-  "/posts/:category": "/posts?category=:category",
+const rules = jsonServer.rewriter({
+  "/books/*": "/$1",
+  "/users/*": "/$1",
 });
 
 // /!\ Bind the router db to the app
