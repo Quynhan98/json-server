@@ -2,8 +2,6 @@ const jsonServer = require("json-server");
 const auth = require("json-server-auth");
 const cors = require("cors");
 const fs = require("fs");
-const morgan = require("morgan");
-const path = require("path");
 
 const app = jsonServer.create();
 const router = jsonServer.router("db.json");
@@ -21,13 +19,6 @@ app.use(auth);
 
 // Add middleware to allow writing files to the JSON server
 app.use(jsonServer.bodyParser);
-
-// Add middleware to log requests and responses
-app.use(
-  morgan("combined", {
-    stream: fs.createWriteStream(path.join(__dirname, "logs.txt")),
-  })
-);
 
 app.use((req, res, next) => {
   if (req.method === "POST" || req.method === "PUT") {
@@ -48,11 +39,6 @@ app.use((req, res, next) => {
   } else {
     next();
   }
-});
-
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).jsonp({ error: "Internal Server Error" });
 });
 
 app.use(router);
