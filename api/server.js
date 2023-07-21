@@ -1,4 +1,5 @@
 // server.js
+const fs = require("fs");
 const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
@@ -37,6 +38,7 @@ server.use((req, res, next) => {
   }
 });
 
+server.use(cors());
 server.use(middlewares);
 server.use(router);
 server.listen(3000, () => {
