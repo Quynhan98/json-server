@@ -4,6 +4,39 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+// Add middleware to allow writing files to the JSON server
+server.use((req, res, next) => {
+  if (req.method === "POST" || req.method === "PUT") {
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", () => {
+      try {
+        const data = JSON.parse(body);
+        const filename = "db.json";
+        const fileContent = fs.readFileSync(filename);
+        const jsonContent = JSON.parse(fileContent);
+        if (req.method === "POST") {
+          jsonContent.push(data);
+        } else if (req.method === "PUT") {
+          const index = jsonContent.findIndex((item) => item.id === data.id);
+          if (index !== -1) {
+            jsonContent[index] = data;
+          }
+        }
+        fs.writeFileSync(filename, JSON.stringify(jsonContent));
+        res.status(200).jsonp(data);
+      } catch (error) {
+        console.error(error);
+        res.status(400).jsonp({ error: "Invalid JSON data" });
+      }
+    });
+  } else {
+    next();
+  }
+});
+
 server.use(middlewares);
 server.use(router);
 server.listen(3000, () => {
